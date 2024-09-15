@@ -1742,4 +1742,7 @@ footer {
   #ContactFirstName {
     margin: 0;
   }
+  .Sec6-Wrapper {
+    animation: scroll 20s linear infinite;
+  }
 }
