@@ -958,14 +958,13 @@ footer {
   font-weight: 400;
 }
 .Cat-Container {
-  width: max-content;
   border: 1px solid rgb(6, 6, 6);
-  display: flex;
+  display: grid;
   align-self: center;
+  grid-template-columns: repeat(4, 1fr);
   width: 70vw;
 }
 .Cat-Container a {
-  flex: 1;
   color: rgb(6, 6, 6);
   text-decoration: none;
   display: flex;
@@ -980,8 +979,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
-  font-weight: 800;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
@@ -1524,6 +1523,9 @@ footer {
   .Product-BoxContainer {
     grid-template-columns: repeat(2, 1fr);
   }
+  .Cat-Container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media screen and (max-width: 1150px) {
   .SignUp-Main {
@@ -1777,5 +1779,12 @@ footer {
   .Product-BoxContainer {
     grid-template-columns: repeat(1, 1fr);
     padding: 0 5vw;
+  }
+  .Product-Box {
+    margin-bottom: 20px;
+    padding: 10%;
+  }
+  .Cat-Container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
