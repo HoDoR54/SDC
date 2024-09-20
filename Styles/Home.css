@@ -204,10 +204,12 @@ footer {
 }
 .Footer-Nav {
   margin: 0 50px;
+  text-align: center;
 }
 .Footer-Nav li {
   list-style: none;
   padding: 10px 0;
+  text-align: center;
 }
 .Footer-Nav li a {
   text-decoration: none;
@@ -363,6 +365,15 @@ footer {
   }
   50% {
     transform: scale(1.15);
+  }
+}
+@keyframes growShrink2 {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
   }
 }
 .PopUp {
@@ -683,16 +694,16 @@ footer {
   justify-content: center;
 }
 .Sec4-Right {
-  border-right: 5px solid rgb(6, 6, 6);
-  border-top: 5px solid rgb(6, 6, 6);
+  border-right: 3px solid rgb(6, 6, 6);
+  border-top: 3px solid rgb(6, 6, 6);
   padding: 30px 30px 0 0;
   margin-left: 40px;
   border-start-end-radius: 30px;
   box-sizing: border-box;
 }
 .Sec5-Left {
-  border-left: 5px solid rgb(6, 6, 6);
-  border-bottom: 5px solid rgb(6, 6, 6);
+  border-left: 3px solid rgb(6, 6, 6);
+  border-bottom: 3px solid rgb(6, 6, 6);
   padding: 0 0 30px 30px;
   margin-right: 40px;
   border-end-start-radius: 30px;
@@ -914,33 +925,23 @@ footer {
   height: 400px;
   object-fit: cover;
 }
-/* ----------------------------------PageNav---------------------------------- */
-.PageNav {
-  width: 100%;
-  padding: 80px 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(6, 6, 6);
-  color: white;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.PageNav h1 {
-  font-size: 3rem;
-  font-weight: 300;
-  text-shadow: 1.5px 1.5px 5px rgba(0, 0, 0, 0.8);
-}
-#PageNav-Products {
-  background-image: url(Images/26.png);
-}
-#PageNav-Health {
-  background-image: url(Images/27.png);
-}
 /* ---------------------------------------Products--------------------------------- */
 .Products-Main {
   display: flex;
   flex-direction: column;
+}
+#PageNav-Products {
+  background-image: url(Images/26.png);
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#PageNav-Products h1 {
+  color: white;
+  font-size: 3rem;
+  font-weight: 400;
+  text-shadow: 1.5px 1.5px 5px rgba(0, 0, 0, 0.9);
 }
 .Categories {
   display: flex;
@@ -1005,6 +1006,7 @@ footer {
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
+  border-radius: 10% 10% 0 0;
 }
 .Product-Box::after {
   content: "";
@@ -1024,6 +1026,9 @@ footer {
 .Product-Box:hover {
   transform: scale(1.05);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+.Product-Box:hover .Product-ImgContainer img {
+  animation: growShrink2 1s infinite ease-in-out;
 }
 .Product-ImgContainer {
   width: 100%;
@@ -1401,6 +1406,87 @@ footer {
   width: 80%;
   height: 20vh;
 }
+/* ------------------------------------AboutUs----------------------------- */
+.AboutUs-Main {
+  display: flex;
+  padding: 70px 20px 30px 20px;
+  align-items: center;
+  flex-direction: column;
+}
+.AboutUs-Body {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.AboutUs-Text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: flex-start;
+  padding: 30px;
+  height: 400px;
+}
+.AboutUs-Text h1 {
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 30px;
+  width: 85%;
+  text-align: start;
+}
+.AboutUs-Text h1 span {
+  font-family: "Matemasie", sans-serif;
+  font-size: 4rem;
+}
+.AboutUs-Text p {
+  text-align: justify;
+  width: 85%;
+}
+.AboutUs-Vis {
+  height: 400px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+.AboutUs-Vis img {
+  aspect-ratio: 4/3;
+  height: 400px;
+  object-fit: cover;
+}
+#Story .AboutUs-Vis img {
+  border-radius: 0 0 0 10%;
+}
+#Direction .AboutUs-Vis img {
+  border-radius: 0 10% 10% 0;
+}
+#Crew .AboutUs-Vis img {
+  border-radius: 10% 0 0 0;
+}
+#Story .AboutUs-Text {
+  border-top: 3px solid rgb(6, 6, 6);
+  border-left: 3px solid rgb(6, 6, 6);
+  border-start-start-radius: 50px;
+  margin-right: 30px;
+}
+#Crew .AboutUs-Text {
+  border-left: 3px solid rgb(6, 6, 6);
+  border-bottom: 3px solid rgb(6, 6, 6);
+  border-end-start-radius: 50px;
+  margin-right: 30px;
+}
+#Direction .AboutUs-Text {
+  border-right: 3px solid rgb(6, 6, 6);
+  padding-right: 15px;
+  margin-left: 30px;
+  align-items: end;
+}
+/* -----------------------------------Health------------------------------ */
+.Health-Main {
+  padding: 50px 30px;
+}
 /* -------------------------------------Responsive------------------------- */
 @media screen and (max-width: 1220px) {
   .Upper-Footer {
@@ -1635,6 +1721,32 @@ footer {
     height: max-content;
     margin: 10px 0;
   }
+  .AboutUs-Body {
+    position: relative;
+    overflow: hidden;
+  }
+  .AboutUs-Vis {
+    position: relative;
+    flex: 0.5;
+  }
+  .AboutUs-Vis img {
+    position: absolute;
+  }
+  .AboutUs-Text {
+    z-index: 50;
+    flex: 1;
+  }
+  #Story .AboutUs-Text,
+  #Direction .AboutUs-Text,
+  #Crew .AboutUs-Text {
+    border: none;
+  }
+  #Story .AboutUs-Vis img,
+  #Direction .AboutUs-Vis img,
+  #Crew .AboutUs-Vis img {
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+  }
 }
 @media screen and (max-width: 720px) {
   .Sec2 {
@@ -1786,5 +1898,29 @@ footer {
   }
   .Cat-Container {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .AboutUs-Vis img {
+    transform: scale(0.8);
+    opacity: 0.35;
+    filter: grayscale(50%) contrast(100%);
+  }
+  .AboutUs-Vis {
+    position: absolute;
+    top: 30%;
+  }
+  .AboutUs-Body .AboutUs-Text {
+    margin-right: 0;
+  }
+  #Story .AboutUs-Text,
+  #Direction .AboutUs-Text,
+  #Crew .AboutUs-Text {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .AboutUs-Body {
+    height: max-content;
+    overflow: visible;
+    margin-bottom: 120px;
   }
 }
