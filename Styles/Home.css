@@ -1896,9 +1896,6 @@ footer {
     margin-bottom: 20px;
     padding: 10%;
   }
-  .Cat-Container {
-    grid-template-columns: repeat(1, 1fr);
-  }
   .AboutUs-Vis img {
     transform: scale(0.8);
     opacity: 0.35;
